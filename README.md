@@ -1,5 +1,5 @@
 INSERT CI/CD ONCE DONE
-## Project #2: Pandas Descriptive Statistics Script
+## Project #3: Polars Descriptive Statistics Script
 
 ## Structure 
 
