@@ -38,7 +38,7 @@ Summary of Structure:
 
 ## Goal of the project
 
-This project analyzes the data on police killings in the United States. It uses Python, Polars, and Matplotlip to generate summary statistics (mean, median, standard deviation) and visualizations. Additionally, a CI/CD pipeline is set up using GitHub Actions, and a summary report in Markdown format is generated as part of the pipeline.
+This project analyzes the data on police killings in the United States. It uses Python, Polars, and Matplotlib to generate summary statistics (mean, median, standard deviation) and visualizations. Additionally, a CI/CD pipeline is set up using GitHub Actions, and a summary report in Markdown format is generated as part of the pipeline.
 
 ## Features
 - Load and clean the dataset
