@@ -9,12 +9,13 @@ def load_dataset(dataset):
     """Loads the dataset"""
     content_df = pl.read_csv(dataset, encoding="ISO-8859-1", null_values=["-", "NA"])
 
-    # Clean the age column by removing unknown references
+    # Clean the age column by removing unknown references and converting to numeric
     content_df = content_df.with_columns(
         [
-            pl.col("age")
-            .replace("Unknown", None)  # Replace "Unknown" with None
-            .cast(pl.Float64)  # Cast the column to Float (FL64)
+            pl.when(pl.col("age") == "Unknown")
+            .then(None)  # Replace "Unknown" with None (null)
+            .otherwise(pl.col("age"))
+            .cast(pl.Float64)  # Cast the column to Float64
         ]
     )
 

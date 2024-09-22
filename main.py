@@ -23,11 +23,12 @@ def general_describe(dataset, columns=None):
 
     # Clean the 'age' column by replacing "Unknown" with None and converting to float
     content_df = content_df.with_columns(
-        pl.col("age")
-        .replace("Unknown", None)  # Replace "Unknown" with None (null)
+        pl.when(pl.col("age") == "Unknown")
+        .then(None)  # Replace "Unknown" with None (null)
+        .otherwise(pl.col("age"))
         .cast(
             pl.Float64
-        )  # Cast the column to a float (or pl.Int64 if i expect integers)
+        )  # Cast the column to a float (or pl.Int64 if integers expected)
     )
 
     # If columns are specified, select only those columns
