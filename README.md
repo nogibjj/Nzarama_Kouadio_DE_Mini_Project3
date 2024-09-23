@@ -1,4 +1,5 @@
-INSERT CI/CD ONCE DONE
+[![CI](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project3/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Nzarama_Kouadio_DE_Mini_Project3/actions/workflows/cicd.yml)
+
 ## Project #3: Polars Descriptive Statistics Script
 
 ## Structure 
@@ -41,7 +42,7 @@ Summary of Structure:
 This project analyzes the data on police killings in the United States. It uses Python, Polars, and Matplotlib to generate summary statistics (mean, median, standard deviation) and visualizations. Additionally, a CI/CD pipeline is set up using GitHub Actions, and a summary report in Markdown format is generated as part of the pipeline.
 
 ## Features
-- Load and clean the dataset
+- Load and also clean the dataset
 - Generate summary statistics (mean, median, standard deviation, minimum, maximum)
 - Create visualizations: histogram of killings by age and a pie chart by gender
 - CI/CD pipeline with GitHub Actions
@@ -51,4 +52,4 @@ This project analyzes the data on police killings in the United States. It uses 
 
 1. Clone the repository using git clone 
 2. Install the required packages through -r requirements.txt
-3. Run the main script to generate the report
+3. Run the main script to generate the report.
